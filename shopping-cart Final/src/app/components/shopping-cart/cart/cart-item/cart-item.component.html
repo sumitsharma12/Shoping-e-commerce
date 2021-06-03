@@ -1,0 +1,29 @@
+<!-- 
+<div class="cart-item">
+  <span>{{ cartItem.productName }}</span> x
+  <span>{{ cartItem.qty }}</span>:
+  <strong>{{ (cartItem.qty * cartItem.price) | currency:'INR' }}</strong>
+</div> -->
+
+
+
+
+<div class="cart-item" style="font-size: 33px " >
+  <span><img style="height: 70px; width: 10%;" src="{{ cartItem.imageUrl }}" alt="" ></span>&nbsp;&nbsp;&nbsp;
+
+  <span>{{ cartItem.productName }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x
+  <span>{{ cartItem.qty }}</span>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;
+  <strong>{{ (cartItem.qty * cartItem.price) | currency:'INR' }}</strong>
+  &nbsp;&nbsp;&nbsp;
+  <select style="width: 5%;" name="" >
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;
+  <i (click)="deletecart(item.id)" class="fa fa-trash" style="font-size: 33px " style="cursor: pointer;" ></i>
+ 
+</div>
+
+

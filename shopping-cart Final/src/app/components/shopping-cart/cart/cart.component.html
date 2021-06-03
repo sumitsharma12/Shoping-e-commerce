@@ -1,0 +1,73 @@
+<br><br>
+<!-- <div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
+
+<ul *ngIf="cartItems.length > 0" class="list-group">
+  <li class="list-group-item" *ngFor="let item of cartItems">
+    <app-cart-item [cartItem]="item"></app-cart-item>
+  </li>
+
+  <li class="list-group-item active">
+    <strong>Total</strong> {{ cartTotal | currency:'INR' }}
+  </li>
+<br>
+  <button  class="btn btn-primary btn-block">CheckOut</button>
+</ul> -->
+
+
+
+
+
+<div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
+<ul *ngIf="cartItems.length > 0" class="list-group">
+  <h3>Review Your Order</h3>
+  <li class="list-group-item" *ngFor="let item of cartItems">
+<!-- <img src="" alt="" srcset="" {{ cartItem.imageUrl }}> -->
+    <app-cart-item [cartItem]="item"></app-cart-item>
+  </li>
+  <li class="list-group-item active">
+    <strong>Total</strong> {{ cartTotal | currency:'INR' }}
+  </li>
+<br> <button [routerLink]="['/checkout']" class="btn btn-primary btn-block col-md-1 ">CheckOut</button>
+</ul>
+
+<br><br>
+<!-- ------------------ -->
+
+
+<!-- <div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
+
+
+<h3>Review Your Order</h3>
+<table *ngIf="cartItems.length > 0"   class="table">
+  <thead>
+    <tr>      
+      <th scope="col">Image</th>
+      <th scope="col">Item</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Operations</th>
+    </tr>
+  </thead>
+  <tbody  *ngFor="let item of cartItems">
+   
+    <tr>
+      <app-cart-item [cartItem]="item">
+      <th scope="row"></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>
+        <i class="fa fa-trash" style="font-size: 25px"></i>&nbsp;&nbsp;
+        <a><i class="fa fa-edit" style="font-size: 25px"></i></a>
+      </th>
+    </app-cart-item>
+    </tr>
+  </tbody>
+  
+</table>
+<li class="list-group-item active">
+  <strong>Total</strong> {{ cartTotal | currency:'INR' }}
+</li><br>
+<button  class="btn btn-primary btn-block col-md-1 ">CheckOut</button> -->
+    
+
